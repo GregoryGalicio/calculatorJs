@@ -53,7 +53,7 @@ console.log("-------------EJERCICIO 3) FACTORIAL--------------")
 
 const mostrarFactorial = (x) => {
     
-    if(x>0){
+    if(x>0 && x%1==0){
 
         let factorial=1
         for (let i = 1; i <= x; i++) {
@@ -64,11 +64,11 @@ const mostrarFactorial = (x) => {
         return factorial
     }
     else{
-        console.log("EL numero es negativo no tiene factorial")
+        console.log("EL numero es negativo o decimal no tiene factorial")
     }
     
 
 
 }
-let resultadoFactorial=mostrarFactorial(-2)
+let resultadoFactorial=mostrarFactorial(5)
 console.log(resultadoFactorial)
