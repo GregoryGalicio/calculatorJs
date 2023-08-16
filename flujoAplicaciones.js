@@ -1,3 +1,4 @@
+var prompt = require('prompt-sync')();
 console.log("---------------FUNCION EDADES PARA ENTRAR-----------")
 
 // EDAD PARA ENTRAR A BAR
@@ -81,7 +82,7 @@ for (let i = 1; i < 11; i++) {
 
 // FUNCION
 
-let sandwich = prompt("Selecciona el tipo de sandwich: Pollo - carne - veggie")
+let sandwich = +prompt("Selecciona el tipo de sandwich: Pollo - carne - veggie")
 
 const sistemaLocal = (sandwich) => {
     let base = 0
@@ -102,10 +103,22 @@ const sistemaLocal = (sandwich) => {
         precioPan = 75
     }
     extra = prompt("¿Quiere algún elemento adicional?")
-    let queso = true
-    let tomate = true
-    let lechuga = true
-    let cebolla = true
-    let mayonesa = true
-    let mostaza = true
+    // let queso = false
+    // let tomate = false
+    // let lechuga = false
+    // let cebolla = false
+    // let mayonesa = false
+    // let mostaza = false
+    // if (extra.includes("queso")){
+    //     queso = true
+    // }
+    let e1 = extra.includes("queso") = true ? 20 : 0  
+    let e2 = extra.includes("tomate") = true ? 15 : 0
+    let e3 = extra.includes("lechuga") = true ? 10 : 0
+    let e4 = extra.includes("cebolla") = true ? 15 : 0
+    let e5 = extra.includes("mayonesa") = true ? 5 : 0
+    let e6 = extra.includes("mostaza") = true ? 5 : 0
+    let extra = e1 + e2 + e3 + e4 + e5 + e6
+    let precioFinal = base + precioPan + extra
+    return `El precio es de ${precioFinal}`
 }
